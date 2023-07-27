@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Bakehouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+            #video-background 
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        background-size:inherit;
+        background-attachment: auto;
+    }
+    #video-background video 
+    {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #584d4d;
+    color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100px;
+}
+
+nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; 
+    display: flex;
+}
+
+
+nav ul li {
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #9b8585;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #967b7b;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+ text-align: center;
+ font-size: 30pt;
+ text-shadow: 2px 2px 1px rgb(232, 232, 241),-2px -2px 1px rgb(152, 151, 153);
+color:black;
+}
+
+header h1 {
+    margin: 0;
+  }
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-item:hover {
+    color:whitesmoke;
+    background-size: cover;
+    background-color:rgb(141, 145, 151);
+  }
+
+  .menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .menu-item h3 {
+    margin: 10px 0;
+  }
+
+  .menu-item p{
+    text-align: justify;
+  }
+
+  a {
+    color:whitesmoke;
+    font-size:large;
+    text-align:center;
+    padding-right: 6.5%;
+    text-decoration: dotted;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    }
+
+a:hover
+   {
+    color:whitesmoke;
+    background-size: cover;
+    background-color:rgb(24, 26, 29);
+   }
+
+   .menu
+   {
+       width: 100%;
+       height: 10px;
+       padding-bottom: 10px;
+   }
+
+.submenu-content {
+    display: none;
+}
+
+.submenu-content:target {
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+    <div id="video-background">
+        <video autoplay loop muted>
+          <source src="images/2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Artisan Bakehouse Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a>
+                    <ul class="submenu">
+                      <li><a href="special.html">Cakes and Pastries</a></li>
+                      <li><a href="beverages.html">Beverages</a></li>
+                    </ul>
+                </li>
+                <li><a href="company.html">Our Company</a>
+                    <ul class="submenu">
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="organisational.html">Organisational Chart</a></li>
+                        <li><a href="vision.html">Vision and Mission</a></li>
+                        <li><a href="career.html">Job Vacancy</a></li>
+                    </ul>
+                </li>
+                <li><a href="promotion.html">Our Promotion</a>
+                    <ul class="submenu">
+                        <li><a href="anniversary.html">Happy Anniversary</a></li>
+                        <li><a href="merdeka.html">Merdeka Special</a></li>
+                        <li><a href="happy.html">Happy 25th</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">Our Services</a>
+                    <ul class="submenu">
+                        <li><a href="contact.html">Contact Details</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+<nav>
+  <ul>
+    <li><a href="#menu1">Coffee</a></li>
+    <li><a href="#menu2">Juice</a></li>
+    <li><a href="#menu3">Special Beverages</a></li>
+  </ul>
+</nav>
+
+
+<main id="menu1">
+<h2>Coffee</h2>
+<section class="menu-items">
+  <div class="menu-item">
+    <img src="images/32.png" alt="Item 1">
+    <h3>Americano</h3>
+    <p><b>Aroma:</b> A delightful scent of freshly brewed coffee, inviting you to savor its rich flavor.</p>
+    <p><b>Ingredients:</b> Made simply with a shot of espresso and hot water, creating a smooth and bold coffee experience.</p>
+    <p><b>Option:</b> Cold, Frappe and Hot</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/18.png" alt="Item 2">
+    <h3>Latte</h3>
+    <p><b>Creamy Froth:</b> Features a creamy and velvety layer of frothed milk on top, adding a luxurious touch to the coffee.</p>
+    <p><b>Ingredients:</b> A harmonious combination of espresso and steamed milk, creating a balanced and indulgent coffee beverage.</p>
+    <p><b>Option:</b> Cold, Frappe and Hot</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/19.png" alt="Item 3">
+    <h3>Matcha Latte</h3>
+    <p><b>Vibrant Green Hue:</b> Boasts a beautiful and inviting green color, characteristic of its high-quality matcha.</p>
+    <p><b>Ingredients:</b> A delightful combination of premium matcha powder, steamed milk, and a touch of sweetener, creating a well-balanced and flavorful drink.</p>
+    <p><b>Option:</b> Cold, Frappe and Hot</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/20.png" alt="Item 4">
+    <h3>Mocha</h3>
+    <p><b>Decadent Chocolate:</b> A delightful blend of rich espresso and creamy chocolate, offering the best of both worlds.</p>
+    <p><b>Ingredients:</b> Combines a shot of espresso with velvety steamed milk and a generous amount of luscious chocolate syrup.</p>
+    <p><b>Option:</b> Cold, Frappe and Hot</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/21.png" alt="Item 5">
+    <h3>Raf Coffee</h3>
+    <p><b>Creamy and Indulgent:</b> A luxurious coffee beverage that combines the richness of a latte with the sweetness of a mocha.</p>
+    <p><b>Ingredients:</b> Made with a shot of espresso, velvety steamed milk, a generous serving of chocolate syrup, and topped with whipped cream and chocolate shavings.</p>
+    <p><b>Option:</b> Cold, Frappe and Hot</p>
+  </div>
+</section>
+</main>
+
+<!-- Add more sections for "About Us" and "Contact" if desired -->
+
+<main id="menu2">
+<h2>Juice</h2>
+<section class="menu-items">
+  <div class="menu-item">
+    <img src="images/22.png" alt="Item 1">
+    <h3>Fresh Orange</h3>
+    <p><b>Juicy Citrus Burst:</b> Experience the refreshing and zesty flavor of nature's juicy orange fruit.</p>
+    <p><b>Option:</b> Cold and Frappe only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/23.png" alt="Item 2">
+    <h3>Apple Juice</h3>
+    <p><b>Crisp and Refreshing:</b> Enjoy the naturally sweet and refreshing taste of freshly pressed apple juice.</p>
+    <p><b>Option:</b> Cold and Frappe only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/25.png" alt="Item 3">
+    <h3>Carrot Juice and Milk</h3>
+    <p><b>Nutritious and Creamy:</b> A wholesome and creamy beverage that combines the goodness of carrots with the richness of milk.</p>
+    <p><b>Option:</b>Cold and Frappe only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/24.png" alt="Item 4">
+    <h3>Watermelon Juice</h3>
+    <p><b>Refreshing and Juicy:</b> Enjoy the hydrating and mouthwatering experience of biting into a juicy slice of watermelon.</p>
+    <p><b>Option:</b> Cold and Frappe only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/26.png" alt="Item 5">
+    <h3>Lychee Juice</h3>
+    <p><b>Exotic Sweetness:</b> Indulge in the luscious and exotic sweetness of freshly pressed lychee juice.</p>
+    <p><b>Option:</b> Cold and Frappe only</p>
+  </div>
+</section>
+</main>
+
+<!-- Add more sections for "About Us" and "Contact" if desired -->
+
+<main id="menu3">
+<h2>Special Beverages</h2>
+<section class="menu-items">
+  <div class="menu-item">
+    <img src="images/27.png" alt="Item 1">
+    <h3>Three Berry Smoothie</h3>
+    <p><b>Berrylicious Blend:</b> A delightful and nutritious smoothie featuring a medley of three delicious berries which are strawberry, blueberry and black raspberry.</p>
+    <p><b>Option:</b> Frappe only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/28.png" alt="Item 4">
+    <h3>Three Layer Tea</h3>
+    <p><b>Unique Layered Delight:</b> A visually striking tea with three distinct layers of flavors and colors.</p>
+    <p><b>Option:</b> Cold and Hot only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/29.png" alt="Item 2">
+    <h3>Tutti Fruity</h3>
+    <p><b>Colorful and Fruity:</b> A vibrant mix of candied fruits that adds a burst of color and sweetness to various desserts.</p>
+    <p><b>Option:</b> Cold and Frappe only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/30.png" alt="Item 3">
+    <h3>Boba Milk Tea</h3>
+    <p><b>Chewy Tapioca Pearls:</b> A creamy and refreshing tea beverage with the added fun of chewy boba pearls.</p>
+    <p><b>Option:</b> Cold only</p>
+  </div>
+  <div class="menu-item">
+    <img src="images/31.png" alt="Item 5">
+    <h3>Various Beverages in Can</h3>
+    <p>Customise your own beverages with our "Produce Can" service! Choose from a variety of high-quality teas, coffees, fruit juices, and more to create your dream drink. Mix and match your favorite ingredients for a unique and satisfying experience. Our staff will guide you to find the perfect balance. Embrace creativity and enjoy your personalized beverage!</p>
+  </div>
+</section>
+</main>
+
+    <footer>
+        <p>&copy; 2023 The Artisan Bakehouse. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+

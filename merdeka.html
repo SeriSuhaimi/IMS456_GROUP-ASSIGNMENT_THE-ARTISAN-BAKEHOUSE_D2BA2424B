@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Bakehouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+            #video-background 
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        background-size:inherit;
+        background-attachment: auto;
+    }
+    #video-background video 
+    {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #584d4d;
+    color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100px;
+}
+
+h2 {
+ text-align: center;
+ font-size: 30pt;
+ text-shadow: 2px 2px 1px rgb(232, 232, 241),-2px -2px 1px rgb(152, 151, 153);
+color:black;
+}
+
+#our-promotion {
+    text-align: justify;
+}
+
+.promotion-image {
+    margin: 30px auto; /* Add margin top and bottom to separate from h2 and set items */
+    max-width: 1000px;
+}
+
+.promotion-image h3 {
+    background-color: rgba(243, 236, 170, 0.5);
+}
+
+.promotion-image p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+
+}
+
+.promotion-image img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.set-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.set-images .set-item {
+    width: calc(30% - 10px); /* Adjust the width to make the set images bigger */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.set-images .set-item:last-child {
+    margin-right: 0; 
+}
+
+.set-images img {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+.set-images p {
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; 
+    display: flex;
+}
+
+
+nav ul li {
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #9b8585;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #967b7b;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center; 
+}
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.submenu-content {
+    display: none;
+}
+
+.submenu-content:target {
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+    <div id="video-background">
+        <video autoplay loop muted>
+          <source src="images/2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Artisan Bakehouse Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a>
+                    <ul class="submenu">
+                        <li><a href="special.html">Cakes and Pastries</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                    </ul>
+                </li>
+                <li><a href="company.html">Our Company</a>
+                    <ul class="submenu">
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="organisational.html">Organisational Chart</a></li>
+                        <li><a href="vision.html">Vision and Mission</a></li>
+                        <li><a href="career.html">Job Vacancy</a></li>
+                    </ul>
+                </li>
+                <li><a href="promotion.html">Our Promotion</a>
+                    <ul class="submenu">
+                        <li><a href="anniversary.html">Happy Anniversary</a></li>
+                        <li><a href="merdeka.html">Merdeka Special</a></li>
+                        <li><a href="happy.html">Happy 25th</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">Our Services</a>
+                    <ul class="submenu">
+                        <li><a href="contact.html">Contact Details</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="our-promotion">
+            <br>
+            <h2>Merdeka Special</h2>
+            <div class="promotion-image">
+                <div class="promotion-item">
+                    <br>
+                <center><h3>31st August - Independence Day</h3></center>
+                <p>Celebrate the spirit of independence with our Merdeka promotion on 31st August! This special day calls for double the joy and double the treats. When you purchase any cake from our delightful collection, you'll get a second cake at 50% off! Share the happiness with your friends and family as you savor our mouthwatering cakes, carefully baked with premium ingredients and artistic craftsmanship. Celebrate freedom and togetherness with our decadent desserts, as we take pride in being a part of your cherished moments.</p>
+              </div>
+<br>
+<br>
+<br>
+<div class="set-images">
+    <div class="set-item">
+        <h3>Set Merdeka 1</h3>
+        <img src="images/photo_2023-07-26_16-56-12.jpg" alt="Merdeka Promotion">
+        <p>Cake 1 + 1 = RM105</p>
+    </div>
+
+    <div class="set-item">
+        <h3>Set Merdeka 2</h3>
+        <img src="images/photo_2023-07-26_12-30-46.jpg" alt="Merdeka Promotion">
+       <p>Cake 1 + 1 = R135</p>
+    </div>
+
+    <div class="set-item">
+        <h3>Set Merdeka 3</h3>
+        <img src="images/photo_2023-07-26_16-26-25.jpg" alt="Merdeka Promotion">
+        <p>Cake 1 + 1 = RM180</p> 
+    </div>
+    </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 The Artisan Bakehouse. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Bakehouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+            #video-background 
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        background-size:inherit;
+        background-attachment: auto;
+    }
+    #video-background video 
+    {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #584d4d;
+    color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100px;
+}
+
+h2 {
+padding: 0 10px;
+ text-align: center;
+ font-size: 30pt;
+ text-shadow: 2px 2px 1px rgb(232, 232, 241),-2px -2px 1px rgb(152, 151, 153);
+ color: black;
+}
+
+p {
+margin-left: -4rem;
+}
+
+        .form-container {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            background-image: url("cake_background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feedback-form {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: beige;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px hotpink;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .feedback-form:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .rating-container {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 1rem;
+            width: 50rem;
+            margin-left: -4rem;
+        }
+
+        .rating-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .rating-stars {
+            font-size: 3rem;
+            color: #ffcf2a;
+        }
+
+        label {
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+            color: black;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        input[type="radio"]:checked ~ label:before {
+            content: "\2605";
+            color: #ffcf2a;
+        }
+
+        .form-field {
+            margin-bottom: 15px;
+        }
+
+        .form-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-field input[type="text"],
+        .form-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid pink;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 35rem;
+            margin-left: 0.5rem;
+            transition: border-color 0.8s ease;
+        }
+
+        .form-field input[type="text"]:focus,
+        .form-field textarea:focus {
+            border-color: hotpink;
+        }
+
+        .form-field textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            max-width: 150px;
+            margin-left: 75%;
+            padding: 10px 15px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: pink;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-color: rgb(238, 182, 210);
+            color: black;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: hotpink;
+            color: white;
+        }
+
+nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; 
+    display: flex;
+}
+
+
+nav ul li {
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #9b8585;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #967b7b;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center; 
+}
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.submenu-content {
+    display: none;
+}
+
+.submenu-content:target {
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+    <div id="video-background">
+        <video autoplay loop muted>
+          <source src="images/2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Artisan Bakehouse Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a>
+                    <ul class="submenu">
+                        <li><a href="special.html">Cakes and Pastries</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                    </ul>
+                </li>
+                <li><a href="company.html">Our Company</a>
+                    <ul class="submenu">
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="organisational.html">Organisational Chart</a></li>
+                        <li><a href="vision.html">Vision and Mission</a></li>
+                        <li><a href="career.html">Job Vacancy</a></li>
+                    </ul>
+                </li>
+                <li><a href="promotion.html">Our Promotion</a>
+                    <ul class="submenu">
+                        <li><a href="anniversary.html">Happy Anniversary</a></li>
+                        <li><a href="merdeka.html">Merdeka Special</a></li>
+                        <li><a href="happy.html">Happy 25th</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">Our Services</a>
+                    <ul class="submenu">
+                        <li><a href="contact.html">Contact Details</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="our-services">
+            <div class="faqs-container">
+              <br> <h2>Feedback Form</h2> <br>
+
+              <div class="form-container">
+                  <div class="feedback-form">
+                      <form action="feedback.html" method="post">
+                          <div class="rating-container">
+                              <p class="rating-label">How do you rate your overall experience?</p>
+                              <div class="rating-stars">
+                                  <input type="radio" id="rate5" name="rate" value="5" required>
+                                  <label for="rate5"></label>
+                                  <input type="radio" id="rate4" name="rate" value="4">
+                                  <label for="rate4"></label>
+                                  <input type="radio" id="rate3" name="rate" value="3">
+                                  <label for="rate3"></label>
+                                  <input type="radio" id="rate2" name="rate" value="2">
+                                  <label for="rate2"></label>
+                                  <input type="radio" id="rate1" name="rate" value="1">
+                                  <label for="rate1"></label>
+                              </div>
+                          </div>
+                          <div class="form-field">
+                              <label>Name</label>
+                              <input type="text" name="fullName" required>
+                          </div>
+                          <div class="form-field">
+                              <label>Email</label>
+                              <input type="text" name="email" required>
+                          </div>
+                          <div class="form-field">
+                              <label>Age</label>
+                              <input type="text" name="age" required>
+                          </div>
+                          <div class="form-field">
+                              <label>Phone</label>
+                              <input type="text" name="phone" required>
+                          </div>
+                          <div class="form-field">
+                              <label>Message</label>
+                              <textarea name="message" required></textarea>
+                          </div>
+                          <button type="submit" class="submit-btn">Submit</button>
+                      </form>
+                  </div>
+              </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 The Artisan Bakehouse. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
